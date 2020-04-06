@@ -10,7 +10,10 @@ export class UserService {
 
   ruth:RuthUser;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+
+    this.ruth=new RuthUser("","","")
+   }
 
   ruthRequest(){
 
@@ -21,11 +24,11 @@ export class UserService {
     }
 
     let promise=new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.ruthApiUrl).subscribe(data=>{
+      this.http.get<ApiResponse>(environment.ruthApiUrl).toPromise().then(response=>{
 
-        this.ruth.name=data.name;
-        this.ruth.avatar_url=data.avatar_url
-        this.ruth.repos_url=data.repos_url
+        this.ruth.name=response.name;
+        this.ruth.avatar_url=response.avatar_url
+        this.ruth.repos_url=response.repos_url
         resolve()
       },error=>{reject(error)})
       

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user-service/user.service';
+import { RuthUser } from '../ruth-class/ruth-user';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userservice:UserService) { }
 
-  ngOnInit(): void {
+  ruth:RuthUser;
+
+  ngOnInit() {
+
+    this.userservice.ruthRequest();
+    this.ruth=this.userservice.ruth
   }
 
 }
