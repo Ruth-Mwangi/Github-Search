@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
 
-  ruthApiUrl:"https://api.github.com/users/Ruth-Mwangi?access_token=5a940cfd1992f2f5488c4b93117c7f9aa3daef17"
+  ruthApiUrl:"https://api.github.com/users/Ruth-Mwangi?access_token=5a940cfd1992f2f5488c4b93117c7f9aa3daef17",
+  ruthRepoApiUrl:"https://api.github.com/users/Ruth-Mwangi/repos?access_token=5a940cfd1992f2f5488c4b93117c7f9aa3daef17"
 };
 
 /*

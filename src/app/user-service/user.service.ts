@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http:HttpClient) {
 
-    this.ruth=new RuthUser("","","")
+    this.ruth=new RuthUser("","")
    }
 
   ruthRequest(){
@@ -20,7 +20,7 @@ export class UserService {
     interface ApiResponse{
       name:string
       avatar_url:string
-      repos_url:string
+      
     }
 
     let promise=new Promise((resolve,reject)=>{
@@ -28,12 +28,16 @@ export class UserService {
 
         this.ruth.name=response.name;
         this.ruth.avatar_url=response.avatar_url
-        this.ruth.repos_url=response.repos_url
+        
         resolve()
       },error=>{reject(error)})
       
     })
 
     return promise
+  }
+
+  ruthRepo(){
+    
   }
 }
