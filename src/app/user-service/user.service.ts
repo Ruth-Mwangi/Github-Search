@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RuthUser } from '../ruth-class/ruth-user';
 import { environment } from 'src/environments/environment';
+import { RuthRepo } from '../ruth-class/ruth-repo';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class UserService {
 
   ruth:RuthUser;
+  repos:RuthRepo[]=[];
 
   constructor(private http:HttpClient) {
 
@@ -38,6 +40,19 @@ export class UserService {
   }
 
   ruthRepo(){
-    
+
+    interface ApiResponse{
+      data:any
+    }
+
+    let promise=new Promise((resolve,reject)=>{
+      this.http.get<ApiResponse>(environment.ruthRepoApiUrl).toPromise().then(response=>{
+        this.repos=response.data
+        resolve()
+      },error=>{reject(error)})
+    })
+
+    return promise
+
   }
 }
