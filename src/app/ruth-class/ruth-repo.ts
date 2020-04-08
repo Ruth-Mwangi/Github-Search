@@ -1,5 +1,6 @@
 export class RuthRepo {
-    constructor(public repos:any){
+    
+    constructor(public items:any){
 
     }
 }

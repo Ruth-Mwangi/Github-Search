@@ -10,11 +10,13 @@ import { RuthRepo } from '../ruth-class/ruth-repo';
 export class UserService {
 
   ruth:RuthUser;
-  repos:RuthRepo[]=[];
+  repos:RuthRepo;
 
   constructor(private http:HttpClient) {
 
     this.ruth=new RuthUser("","")
+    
+    
    }
 
   ruthRequest(){
@@ -27,9 +29,9 @@ export class UserService {
 
     let promise=new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>(environment.ruthApiUrl).toPromise().then(response=>{
-
         this.ruth.name=response.name;
         this.ruth.avatar_url=response.avatar_url
+        
         
         resolve()
       },error=>{reject(error)})
@@ -39,20 +41,24 @@ export class UserService {
     return promise
   }
 
-  ruthRepo(){
+  repoRequest(){
 
+    
     interface ApiResponse{
-      data:any
+      items:any
     }
-
-    let promise=new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.ruthRepoApiUrl).toPromise().then(response=>{
-        this.repos=response.data
+    let promise =new Promise((resolve,reject)=>{
+      this.http.get<ApiResponse>(environment.rururepo).toPromise().then(response=>{
+        this.repos=response.items
+        alert(response.items[0].name)
+        alert(this.repos[0].name)
         resolve()
-      },error=>{reject(error)})
+      },error=>{ reject(error)})
     })
 
-    return promise
-
+    
+    return promise;
   }
+
+  
 }
