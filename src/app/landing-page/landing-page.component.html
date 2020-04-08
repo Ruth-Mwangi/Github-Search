@@ -1,37 +1,17 @@
 <div class="container-fluid">
+<div class="row">
+    <div class="col-sm-3">
 
-    <div class="side">
-        <div class="name">
-            <h5 class="text-center">{{ruth.name}}</h5>
-            
-
-            <img src="{{ruth.avatar_url}}" alt="">
-            
-            
-        </div>
+        <img src="{{ruth.avatar_url}}" alt="">
+        
     </div>
+    <div class="col-sm-9">
 
-    <div class="repos">
-
-        <h1 class="text text-center">My Repositories</h1>
-
-        <div class="repositories">
-            <div class="card  text-white" *ngFor="let repo of repos;let i=index">
-                
-                <div class="card-body">
-                    <a href="{{repo.html_url}}"><h4 class="card-title">{{repo.name}}</h4></a>
-                    <hr>
-                    <p class="card-text">{{repo.description}}</p>
-                </div>
-            </div>
-            
-        </div>
-      
-       
-
-
+        <h1 class="text text-center display-4">{{ruth.name}}</h1>
+        <a routerLink='/projects'><h3 class="text text-center" >Click here to see some of my Projects</h3></a>
+        
     </div>
-    
+</div>
 </div>
 
 

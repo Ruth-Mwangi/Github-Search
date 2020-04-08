@@ -1,43 +1,25 @@
 @font-face{
     font-family: 'q';
-    src: url(../../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf);
+    src: url(../../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
 }
-.container-fluid{
-    display: inline-block;
-}
-
-.side{
-    width: 10%;
-    float: left;
-    font-family: 'q';
-    padding-top: 50px;
-}
-
-.repos{
-    width: 90%;
-    float: right;
-    padding-top: 50px;
-    font-family: 'q';
-}
-
 
 img{
-    width:90%;
+    width: 100%;
+    border-radius: 50%;
 }
+.container-fluid{
+    padding-top: 180px;
+    font-family: 'q';
+    color: blanchedalmond;
+}
+
 a{
     color: blanchedalmond;
 }
-hr{
-    background-color: gold;
-}
 
-.card{
-    background-color: #1e1e1e;
-    border: gold 1px ridge;
-    width: 25%;
-}
-
-.repositories{
-    display: flex;
-    flex-wrap: wrap;
+.row{
+    margin: auto;
+    width: 60%;
+    align-items: center; 
+       
 }

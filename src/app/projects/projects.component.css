@@ -1,5 +1,5 @@
 @font-face{
-    font-family: 'q';
+    font-family: 'p';
     src: url(../../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf);
 }
 .container-fluid{
@@ -9,20 +9,30 @@
 .side{
     width: 10%;
     float: left;
-    font-family: 'q';
-    padding-top: 50px;
+    font-family: 'p';
+    padding-top: 20px;
+    position: -webkit-fixed;
+    position: fixed;
+}
+.name h5{
+    margin-bottom: 30px;
+    
 }
 
 .repos{
     width: 90%;
     float: right;
-    padding-top: 50px;
-    font-family: 'q';
+    padding-top: 20px;
+    font-family: 'p';
+}
+.repos h1{
+    position: sticky;
 }
 
 
 img{
     width:90%;
+    border-radius: 50%;
 }
 a{
     color: blanchedalmond;
@@ -32,12 +42,30 @@ hr{
 }
 
 .card{
-    background-color: #1e1e1e;
-    border: gold 1px ridge;
+    background-color: rgba(1, 1, 1,0.47);
+    border: blanchedalmond 1px ridge;
     width: 25%;
 }
 
 .repositories{
     display: flex;
     flex-wrap: wrap;
+}
+.socials{
+    display: grid;
+    align-items: center;
+}
+
+.socials a{
+    margin:10px;
+}
+button{
+    background: transparent;
+    color: blanchedalmond;
+    border: blanchedalmond 1px solid;
+}
+
+.card a{
+    text-align: center;
+    justify-content: center;
 }

@@ -12,31 +12,19 @@ import { environment } from 'src/environments/environment';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private userservice:UserService,private http:HttpClient) { 
+  constructor(private userservice:UserService) { 
     
   }
 
-  ruth:RuthUser;
+  ruth:RuthUser
 
-  repos:RuthRepo;
-
- 
 
   ngOnInit():void {
-    
-      
+
     this.userservice.ruthRequest()
+
     this.ruth=this.userservice.ruth
-    // this.userservice.repoRequest()
-    // this.repos=this.userservice.repos
-    // alert(typeof(this.ruth))
-    //this.repos=[{name:"ruru",description:"ruru crafts"},{name:"ruru",description:"ruru crafts"},{name:"ruru",description:"ruru crafts"},]
-    interface ApiResponse{
-      items:any
-    }
-    this.http.get<ApiResponse>(environment.rururepo).subscribe(response=>{
-      this.repos=response.items
-    })
+    
     
   }
 

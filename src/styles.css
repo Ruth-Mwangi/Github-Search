@@ -2,7 +2,10 @@
 
 
 body{
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
+    background: url(./assets/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+    /* background-position: bottom; */
+    background-size: cover;
     color: whitesmoke;
 }
 
