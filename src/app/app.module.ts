@@ -7,12 +7,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectsComponent } from './projects/projects.component'
 import { RoutingModule } from './routing/routing.module';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
