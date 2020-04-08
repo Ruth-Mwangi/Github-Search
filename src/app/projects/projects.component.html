@@ -21,10 +21,10 @@
         <h1 class="text text-center">My Repositories</h1>
 
         <div class="repositories">
-            <div class="card  text-white" *ngFor="let repo of repos;let i=index">
+            <div class="card  text-white" *ngFor="let repo of repos;let i=index" appHighlight>
                 
                 <div class="card-body">
-                    <a href="{{repo.html_url}}"><h4 class="card-title">{{repo.name}}</h4></a>
+                    <a href="{{repo.html_url}}" target="_blank"><h4 class="card-title">{{repo.name}}</h4></a>
                     <hr>
                     <p class="card-text">{{repo.description}}</p><br>
                     <p> ~ Created {{repo.created_at|dateCount}} days ago</p>
