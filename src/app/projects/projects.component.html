@@ -27,6 +27,7 @@
                     <a href="{{repo.html_url}}"><h4 class="card-title">{{repo.name}}</h4></a>
                     <hr>
                     <p class="card-text">{{repo.description}}</p><br>
+                    <p> ~ Created {{repo.created_at|dateCount}} days ago</p>
 
                     <a href="{{repo.homepage}}" target="_blank"> <button>Demo</button></a>
                 </div>
