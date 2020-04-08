@@ -1,0 +1,21 @@
+.container-fluid{
+    display: inline-block;
+}
+
+.side{
+    width: 10%;
+    float: left;
+}
+.repos{
+    width: 90%;
+    float: right;
+}
+
+img{
+    width:90%;
+}
+
+.card{
+    background-color: #1e1e1e;
+    border: whitesmoke 1px ridge;
+}

@@ -11,12 +11,18 @@
     </div>
 
     <div class="repos">
-        
-        <div *ngFor="let repo of repos;let i=index">
-            <p>{{repo.name}}</p>
-            <p>{{repo.description}}</p>
 
+        <div class="card-columns">
+            <div class="card  text-white" *ngFor="let repo of repos;let i=index">
+                
+                <div class="card-body">
+                    <a href="{{repo.html_url}}"><h4 class="card-title">{{repo.name}}</h4></a>
+                    <p class="card-text">{{repo.description}}</p>
+                </div>
+            </div>
+            
         </div>
+      
        
 
 

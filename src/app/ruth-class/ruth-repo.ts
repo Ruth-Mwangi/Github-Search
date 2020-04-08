@@ -1,6 +1,6 @@
 export class RuthRepo {
     
-    constructor(public items:any){
+    constructor(public items:any[]){
 
     }
 }

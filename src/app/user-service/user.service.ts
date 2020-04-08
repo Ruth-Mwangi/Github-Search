@@ -10,7 +10,8 @@ import { RuthRepo } from '../ruth-class/ruth-repo';
 export class UserService {
 
   ruth:RuthUser;
-  repos:RuthRepo;
+  private repos:RuthRepo;
+  
 
   constructor(private http:HttpClient) {
 
@@ -42,16 +43,20 @@ export class UserService {
   }
 
   repoRequest(){
-
+    
     
     interface ApiResponse{
       items:any
     }
+
+   
     let promise =new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>(environment.rururepo).toPromise().then(response=>{
         this.repos=response.items
         alert(response.items[0].name)
         alert(this.repos[0].name)
+        
+        
         resolve()
       },error=>{ reject(error)})
     })
