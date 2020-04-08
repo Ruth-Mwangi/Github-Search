@@ -11,6 +11,7 @@ img{
     padding-top: 180px;
     font-family: 'q';
     color: blanchedalmond;
+    display: inline-block;
 }
 
 a{
@@ -22,4 +23,19 @@ a{
     width: 60%;
     align-items: center; 
        
+}
+
+.main{
+    width: 95%;
+    float: left;
+}
+.socials{
+    display: grid;
+    width: 5%;
+    float: right;
+}
+
+.socials a{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
