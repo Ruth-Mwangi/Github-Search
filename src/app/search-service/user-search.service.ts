@@ -9,9 +9,14 @@ import { error } from 'protractor';
 })
 export class UserSearchService {
 
-  constructor(private http:HttpClient) { }
-
   user:SearchUser;
+
+  constructor(private http:HttpClient) {
+
+    this.user=new SearchUser([])
+   }
+
+  
 
   searchUser(search:HTMLInputElement){
     let apiUser=(environment.searchUser+search.value)
@@ -22,9 +27,13 @@ export class UserSearchService {
 
     let promise= new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>(apiUser).toPromise().then(response=>{
-        this.user=response.items
+        this.user.items=(response.items)
         resolve()
       },error=>{reject(error)})
     })
+    return promise
+  }
+  displayUser(){
+    return this.user
   }
 }

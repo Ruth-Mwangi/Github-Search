@@ -14,6 +14,10 @@ export class NavigationComponent implements OnInit {
   constructor(private userservice:UserSearchService,private reposervice:RepoSearchService) { }
 
   searchRepo(search:HTMLInputElement){
+    if(search.value===''){
+      alert("You must have an input")
+      return false;
+    }
     this.reposervice.searchRepo(search);
     this.elem.nativeElement.value=''
 

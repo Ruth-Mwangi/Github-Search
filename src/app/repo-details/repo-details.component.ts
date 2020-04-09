@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RepoSearchService } from '../search-service/repo-search.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-repo-details',
@@ -8,19 +10,21 @@ import { RepoSearchService } from '../search-service/repo-search.service';
 })
 export class RepoDetailsComponent implements OnInit {
 
-  repo:any;
+  repos:any;
+  
 
-  constructor(private reposervice:RepoSearchService) { 
-
-    this.repo=reposervice.displayRepo()
+  constructor(private reposervice:RepoSearchService,private http:HttpClient) { 
+    
   }
+
+ 
 
 
 
   ngOnInit(): void {
 
+    this.repos=this.reposervice.displayRepo()
     
-
     
   }
 

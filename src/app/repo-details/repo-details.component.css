@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'p';
+    src: url(../../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf);
+}
+
+.container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'p';
+}
+
+.card{
+    width: 25%;
+    background-color: rgba(0, 0, 0,0.67);
+    color: blanchedalmond;
+    border: goldenrod solid 1px;
+    /* margin-right: 5px; */
+    margin-bottom: 10px;
+}
+
+a{
+    color: blanchedalmond;
+}
+
+hr{
+    background-color: goldenrod;
+}

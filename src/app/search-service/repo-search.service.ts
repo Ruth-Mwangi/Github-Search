@@ -11,7 +11,10 @@ export class RepoSearchService {
 
   repo:SearchRepo;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+
+    this.repo=new SearchRepo([])
+   }
 
   searchRepo(search:HTMLInputElement){
 
@@ -24,14 +27,12 @@ export class RepoSearchService {
     let promise=new Promise((resolve,reject)=>{
 
      this.http.get<ApiResponse>(apiRepo).toPromise().then(response=>{
-
-      this.repo=response.items
-      alert(response.items[0].name)
-      alert(this.repo[0].name)
+      this.repo.items=(response.items)
       resolve()
      },error=>{reject(error)})
       
     })
+    
     return promise
   }
 
