@@ -1,6 +1,6 @@
 @font-face{
-    font-family: 'q';
-    src: url(../../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
+    font-family: 'Handlee';
+    src: url(../../assets/fonts/Handlee/Handlee-Regular.ttf);
 }
 
 input{
@@ -12,16 +12,27 @@ input{
     border-radius: 15px 50px 30px 5px;
     
 }
+h4,a{
+    color: white;
+}
+
 
 .search{
     width: 100%;
     margin-top: 10px;
+    display: inline-block;
+    font-family: 'Handlee';
     
 }
 .inputs{
-    width: 50%;
-    margin: auto;
+    width: 90%;
     
+    float: right;
+    
+}
+.home{
+    width: 10%;
+    float: left;
 }
 
 

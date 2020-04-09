@@ -1,5 +1,9 @@
 <div class="search">
+    <div class="home ">
+        <a [routerLink]="['/home']" ><h3 class="text">Home</h3> </a>
+    </div>
     <div class="inputs">
+        
         <input type="text" name="search" id="search" placeholder="Search for users or repositories...." #search>
         <button class="btn btn-primary btn-sm" (click)="searchUser(search)" [routerLink]="['/users']"  > Search User</button>
         <button class="btn btn-success btn-sm" (click)="searchRepo(search)" [routerLink]="['/repositories']" >Search Repositories</button>
