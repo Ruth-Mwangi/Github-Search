@@ -9,7 +9,9 @@ import { ProjectsComponent } from './projects/projects.component'
 import { RoutingModule } from './routing/routing.module';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { RepoDetailsComponent } from './repo-details/repo-details.component'
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import {FormsModule} from '@angular/forms'
     LandingPageComponent,
     ProjectsComponent,
     DateCountPipe,
-    HighlightDirective
+    HighlightDirective,
+    UserDetailsComponent,
+    RepoDetailsComponent
   ],
   imports: [
     BrowserModule,

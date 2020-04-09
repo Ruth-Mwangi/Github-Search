@@ -1,10 +1,10 @@
 <div class="search">
-    
-    <input type="text" name="search" id="search" #search>
-    <div class="buttons">
-        <button class="btn btn-primary"> Search User</button>
-        <button class="btn btn-success">Search Repositories</button>
+    <div class="inputs">
+        <input type="text" name="search" id="search" placeholder="Search for users or repositories...." #search>
+        <button class="btn btn-primary btn-sm"> Search User</button>
+        <button class="btn btn-success btn-sm" (click)="searchRepo(search)">Search Repositories</button>
     </div>
+    
 </div>
 
 <div class="container-fluid">

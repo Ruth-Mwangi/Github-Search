@@ -40,6 +40,31 @@ a{
     margin-bottom: 50px;
 }
 
+.inputs{
+    width: 50%;
+    margin: auto;
+    
+}
+
 input{
-    border-radius: 15px 50px; 
+    
+    width: 60%;
+    background-color: rgba(1, 1, 1,1);
+    color: white;
+    border: solid 1px white;
+    border-radius: 15px 50px 30px 5px;
+    
+}
+
+.search{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+
+button{
+    margin-right:10px;
+    margin-left: 10px;
+    border-radius: 15px 50px 30px 5px;
 }
