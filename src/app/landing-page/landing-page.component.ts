@@ -11,20 +11,12 @@ import { UserService } from '../user-service/user.service';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private userservice:UserSearchService,private reposervice:RepoSearchService,private user:UserService) { 
+  constructor(private user:UserService) { 
     
   }
 
   ruth:RuthUser
 
-  searchRepo(search:HTMLInputElement){
-    this.reposervice.searchRepo(search);
-
-  }
-  searchUser(search:HTMLInputElement){
-    this.userservice.searchUser(search);
-    
-  }
   
 
 

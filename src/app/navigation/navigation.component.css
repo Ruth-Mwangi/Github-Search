@@ -1,0 +1,34 @@
+@font-face{
+    font-family: 'q';
+    src: url(../../assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf);
+}
+
+input{
+    
+    width: 60%;
+    background-color: rgba(1, 1, 1,1);
+    color: white;
+    border: solid 1px white;
+    border-radius: 15px 50px 30px 5px;
+    
+}
+
+.search{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.inputs{
+    width: 50%;
+    margin: auto;
+    
+}
+
+
+
+
+button{
+    margin-right:10px;
+    margin-left: 10px;
+    border-radius: 15px 50px 30px 5px;
+}
