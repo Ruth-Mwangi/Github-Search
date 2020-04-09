@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user-service/user.service';
 import { RuthUser } from '../ruth-class/ruth-user';
-import { HttpClient } from '@angular/common/http';
-import { RuthRepo } from '../ruth-class/ruth-repo';
-import { environment } from 'src/environments/environment';
 import { RepoSearchService } from '../search-service/repo-search.service';
+import { UserSearchService } from '../search-service/user-search.service';
+import { UserService } from '../user-service/user.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +11,7 @@ import { RepoSearchService } from '../search-service/repo-search.service';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private userservice:UserService,private reposervice:RepoSearchService) { 
+  constructor(private userservice:UserSearchService,private reposervice:RepoSearchService,private user:UserService) { 
     
   }
 
@@ -21,6 +19,10 @@ export class LandingPageComponent implements OnInit {
 
   searchRepo(search:HTMLInputElement){
     this.reposervice.searchRepo(search);
+
+  }
+  searchUser(search:HTMLInputElement){
+    this.userservice.searchUser(search);
     
   }
   
@@ -28,9 +30,9 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit():void {
 
-    this.userservice.ruthRequest()
+    this.user.ruthRequest()
 
-    this.ruth=this.userservice.ruth
+    this.ruth=this.user.ruth
     
     
   }

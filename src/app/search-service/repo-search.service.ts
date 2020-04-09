@@ -34,4 +34,8 @@ export class RepoSearchService {
     })
     return promise
   }
+
+  displayRepo(){
+    return this.repo
+  }
 }
