@@ -1,9 +1,10 @@
 <div class="container-fluid">
-    <div class="card" *ngFor="let user of users.item">
+    <div class="card" *ngFor="let user of users.items;let i=index">
         <img class="card-img-top" src="{{user.avatar_url}}" alt="">
         
         <div class="card-body">
-            <a href="{{user.html_url}}"><h4 class="card-title">{{user.login}}</h4></a>
+            <hr>
+            <a href="{{user.html_url}}" target="_blank"><h4 class="card-title">{{user.login}}</h4></a>
             
         </div>
     </div>

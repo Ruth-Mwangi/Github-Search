@@ -1,13 +1,13 @@
 @font-face{
-    font-family: 'p';
-    src: url(../../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf);
+    font-family: 'handlee';
+    src: url(../../assets/fonts/Handlee/Handlee-Regular.ttf);
 }
 
 .container-fluid{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    font-family: 'p';
+    font-family: 'handlee';
 }
 
 .card{

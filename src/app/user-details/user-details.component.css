@@ -11,12 +11,13 @@
 }
 
 .card{
-    width: 25%;
+    width: 20%;
     background-color: rgba(0, 0, 0,0.67);
     color: blanchedalmond;
     border: goldenrod solid 1px;
     /* margin-right: 5px; */
     margin-bottom: 10px;
+    align-items: center;
 }
 
 a{
@@ -25,4 +26,9 @@ a{
 
 hr{
     background-color: goldenrod;
+}
+
+img{
+    width: 30%;
+    border-radius: 50%;
 }
