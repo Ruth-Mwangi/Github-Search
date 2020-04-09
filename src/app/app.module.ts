@@ -11,7 +11,8 @@ import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
 import {FormsModule} from '@angular/forms';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { RepoDetailsComponent } from './repo-details/repo-details.component'
+import { RepoDetailsComponent } from './repo-details/repo-details.component';
+import { NavigationComponent } from './navigation/navigation.component'
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RepoDetailsComponent } from './repo-details/repo-details.component'
     DateCountPipe,
     HighlightDirective,
     UserDetailsComponent,
-    RepoDetailsComponent
+    RepoDetailsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
