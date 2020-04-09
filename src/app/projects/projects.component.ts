@@ -29,9 +29,6 @@ export class ProjectsComponent implements OnInit {
     this.ruth=this.userservice.ruth
     this.userservice.repoRequest();
     this.repos=this.userservice.repos
-
-   
-    
     
   }
   

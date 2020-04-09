@@ -18,7 +18,6 @@ export class UserService {
     this.ruth=new RuthUser("","")
     this.repos=new RuthRepo([])
     
-    
    }
 
   ruthRequest(){
