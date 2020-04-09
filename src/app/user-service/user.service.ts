@@ -16,6 +16,7 @@ export class UserService {
   constructor(private http:HttpClient) {
 
     this.ruth=new RuthUser("","")
+    this.repos=new RuthRepo([])
     
     
    }
@@ -43,28 +44,25 @@ export class UserService {
     return promise
   }
 
-  // repoRequest(){
+  repoRequest(){
     
     
-  //   interface ApiResponse{
-  //     items:any
-  //   }
+    interface ApiResponse{
+      items:any
+    }
 
    
-  //   let promise =new Promise((resolve,reject)=>{
-  //     this.http.get<ApiResponse>(environment.rururepo).toPromise().then(response=>{
-  //       this.repos=response.items
-  //       alert(response.items[0].name)
-  //       alert(this.repos[0].name)
+    let promise =new Promise((resolve,reject)=>{
+      this.http.get<ApiResponse>(environment.rururepo).toPromise().then(response=>{
+        this.repos.items=(response.items)
         
-        
-  //       resolve()
-  //     },error=>{ reject(error)})
-  //   })
+        resolve()
+      },error=>{ reject(error)})
+    })
 
     
-  //   return promise;
-  // }
+    return promise;
+  }
 
   
 }

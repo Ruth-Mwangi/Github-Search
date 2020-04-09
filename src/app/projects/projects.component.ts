@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
 
   ruth:RuthUser;
 
-  repos:RuthRepo;
+  repos:any;
 
  
 
@@ -27,13 +27,11 @@ export class ProjectsComponent implements OnInit {
       
     this.userservice.ruthRequest()
     this.ruth=this.userservice.ruth
+    this.userservice.repoRequest();
+    this.repos=this.userservice.repos
+
    
-    interface ApiResponse{
-      items:any
-    }
-    this.http.get<ApiResponse>(environment.rururepo).subscribe(response=>{
-      this.repos=response.items
-    })
+    
     
   }
   

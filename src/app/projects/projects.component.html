@@ -20,7 +20,7 @@
         <h1 class="text text-center">My Repositories</h1>
 
         <div class="repositories">
-            <div class="card  text-white" *ngFor="let repo of repos;let i=index" appHighlight>
+            <div class="card  text-white" *ngFor="let repo of repos.items;let i=index" appHighlight>
                 
                 <div class="card-body">
                     <a href="{{repo.html_url}}" target="_blank"><h4 class="card-title">{{repo.name}}</h4></a>
