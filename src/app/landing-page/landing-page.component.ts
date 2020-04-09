@@ -17,6 +17,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   ruth:RuthUser
+  
 
 
   ngOnInit():void {

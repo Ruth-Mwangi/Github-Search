@@ -9,6 +9,8 @@ import { ProjectsComponent } from './projects/projects.component'
 import { RoutingModule } from './routing/routing.module';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
+import {FormsModule} from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HighlightDirective } from './highlight.directive';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    //RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

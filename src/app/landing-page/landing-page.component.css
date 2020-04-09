@@ -39,3 +39,7 @@ a{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+input{
+    border-radius: 15px 50px; 
+}
